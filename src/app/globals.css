@@ -226,16 +226,21 @@ body {
 }
 
 /* Logo styling */
-.logo-now-text {
-  fill: #1E293B;
+.logo-svg {
+  color: #1E293B;
 }
 
 @media (prefers-color-scheme: dark) {
-  .logo-now-text {
-    fill: #FFFFFF;
+  .logo-svg {
+    color: #FFFFFF;
   }
 }
 
-.dark .logo-now-text {
-  fill: #FFFFFF;
+.dark .logo-svg {
+  color: #FFFFFF;
 }
+
+.logo-now-text {
+  fill: currentColor;
+}
+
