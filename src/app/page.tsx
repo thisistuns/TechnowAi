@@ -49,14 +49,25 @@ export default function Home() {
               Câu hỏi thường gặp
             </a>
           </div>
-          <a
-            className="bg-primary text-white font-semibold px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity shadow-lg shadow-primary/30"
-            href="https://www.facebook.com/technowIT.vn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Đăng ký ngay
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              className="bg-primary text-white font-semibold px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity shadow-lg shadow-primary/30 flex items-center gap-2"
+              href="https://m.me/technowIT.vn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-facebook-messenger"></i>
+              <span className="hidden sm:inline">Nhắn tin</span>
+            </a>
+            <a
+              className="bg-primary text-white font-semibold px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity shadow-lg shadow-primary/30"
+              href="https://www.facebook.com/technowIT.vn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Đăng ký ngay
+            </a>
+          </div>
         </nav>
       </header>
 
