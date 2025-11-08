@@ -16,28 +16,16 @@ export default function Home() {
               className="logo-svg"
             >
               <text
-                fill="#4A90E2"
                 fontFamily="Poppins, sans-serif"
                 fontSize="40"
                 fontWeight="bold"
                 letterSpacing="0em"
                 style={{ whiteSpace: "pre" }}
               >
-                <tspan x="0" y="40.8">
+                <tspan x="0" y="40.8" fill="#4A90E2">
                   tech
                 </tspan>
-              </text>
-              <text
-                className="logo-now-text"
-                fontFamily="Poppins, sans-serif"
-                fontSize="40"
-                fontWeight="bold"
-                letterSpacing="0em"
-                style={{ whiteSpace: "pre" }}
-              >
-                <tspan x="110" y="40.8">
-                  now
-                </tspan>
+                <tspan className="logo-now-text">now</tspan>
               </text>
             </svg>
           </div>
