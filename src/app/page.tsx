@@ -13,6 +13,7 @@ export default function Home() {
               viewBox="0 0 262 50"
               width="150"
               xmlns="http://www.w3.org/2000/svg"
+              className="logo-svg"
             >
               <text
                 fill="#4A90E2"
@@ -27,7 +28,7 @@ export default function Home() {
                 </tspan>
               </text>
               <text
-                fill="#FFFFFF"
+                className="logo-now-text"
                 fontFamily="Poppins, sans-serif"
                 fontSize="40"
                 fontWeight="bold"

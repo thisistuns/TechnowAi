@@ -29,6 +29,13 @@
   --text-muted-dark: #94A3B8;
   --primary: #4A90E2;
   --brand-dark-blue: #000080;
+  --logo-now-color: #1E293B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --logo-now-color: #FFFFFF;
+  }
 }
 
 .material-symbols-outlined {
@@ -216,4 +223,19 @@ body {
 
 .stagger-5 {
   animation-delay: 0.5s;
+}
+
+/* Logo styling */
+.logo-now-text {
+  fill: #1E293B;
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-now-text {
+    fill: #FFFFFF;
+  }
+}
+
+.dark .logo-now-text {
+  fill: #FFFFFF;
 }
