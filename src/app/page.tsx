@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ScrollReveal from "./components/ScrollReveal";
 import MobileMenu from "./components/MobileMenu";
+import FloatingChatButton from "./components/FloatingChatButton";
 
 export default function Home() {
   return (
@@ -49,15 +50,6 @@ export default function Home() {
             </a>
           </div>
           <div className="hidden md:flex items-center gap-3">
-            <a
-              className="bg-primary text-white font-semibold px-4 py-2 rounded-md hover:opacity-90 transition-opacity shadow-lg shadow-primary/30 flex items-center gap-2 text-sm"
-              href="https://m.me/technowIT.vn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-facebook-messenger"></i>
-              Nhắn tin
-            </a>
             <a
               className="bg-primary text-white font-semibold px-4 py-2 rounded-md hover:opacity-90 transition-opacity shadow-lg shadow-primary/30 text-sm"
               href="https://www.facebook.com/technowIT.vn"
@@ -508,6 +500,8 @@ export default function Home() {
           </p>
         </div>
       </footer>
+
+      <FloatingChatButton />
     </div>
   );
 }

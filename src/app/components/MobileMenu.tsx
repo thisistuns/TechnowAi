@@ -46,16 +46,6 @@ export default function MobileMenu() {
               </a>
               <div className="flex flex-col gap-3 pt-4 border-t border-slate-200 dark:border-slate-800">
                 <a
-                  className="bg-primary text-white font-semibold px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity text-center flex items-center justify-center gap-2"
-                  href="https://m.me/technowIT.vn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <i className="fab fa-facebook-messenger"></i>
-                  Nhắn tin
-                </a>
-                <a
                   className="bg-primary text-white font-semibold px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity text-center"
                   href="https://www.facebook.com/technowIT.vn"
                   target="_blank"
