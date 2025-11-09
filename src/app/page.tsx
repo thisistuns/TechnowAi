@@ -198,14 +198,14 @@ export default function Home() {
                 <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
                 <div className="flex items-start mb-3">
                   <i className="fas fa-shield text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">Bảo mật dữ liệu</h3>
+                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.security.title")}</h3>
                 </div>
                 <div className="flex-grow">
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    Không dùng dữ liệu để huấn luyện mô hình của OpenAI
+                    {t("businessFeatures.security.desc1")}
                   </p>
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    Dữ liệu được mã hóa cả &quot;at rest&quot; và &quot;in transit&quot;
+                    {t("businessFeatures.security.desc2")}
                   </p>
                 </div>
                 </div>
@@ -215,14 +215,14 @@ export default function Home() {
                 <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
                 <div className="flex items-start mb-3">
                   <i className="fas fa-briefcase text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">Workspace doanh nghiệp</h3>
+                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.workspace.title")}</h3>
                 </div>
                 <div className="flex-grow">
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    Gói Business dành cho tối thiểu 2 người dùng trở lên
+                    {t("businessFeatures.workspace.desc1")}
                   </p>
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    Quản lý thành viên, phân quyền, kiểm soát admin. Chia sẻ dự án và GPT tùy chỉnh trong workspace
+                    {t("businessFeatures.workspace.desc2")}
                   </p>
                 </div>
                 </div>
@@ -232,14 +232,14 @@ export default function Home() {
                 <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
                 <div className="flex items-start mb-3">
                   <i className="fas fa-robot text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">Mô hình AI nâng cao</h3>
+                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.aiModels.title")}</h3>
                 </div>
                 <div className="flex-grow">
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    Truy cập các mô hình &quot;frontier&quot; như GPT-4 với mức sử dụng không giới hạn (có guardrails)
+                    {t("businessFeatures.aiModels.desc1")}
                   </p>
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    Data analysis, Code edits, File uploads, Vision được hỗ trợ tốt hơn
+                    {t("businessFeatures.aiModels.desc2")}
                   </p>
                 </div>
                 </div>
@@ -249,11 +249,11 @@ export default function Home() {
                 <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
                 <div className="flex items-start mb-3">
                   <i className="fas fa-link text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">Connectors</h3>
+                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.connectors.title")}</h3>
                 </div>
                 <div className="flex-grow">
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    Kết nối tới Gmail, Outlook, SharePoint, Google Drive để ChatGPT có thể truy vấn dữ liệu doanh nghiệp
+                    {t("businessFeatures.connectors.description")}
                   </p>
                 </div>
                 </div>
@@ -263,14 +263,14 @@ export default function Home() {
                 <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
                 <div className="flex items-start mb-3">
                   <i className="fas fa-users text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">Cộng tác nhóm</h3>
+                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.collaboration.title")}</h3>
                 </div>
                 <div className="flex-grow">
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    Hỗ trợ Projects, Tasks trong workspace
+                    {t("businessFeatures.collaboration.desc1")}
                   </p>
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    Tạo & chia sẻ GPTs tùy chỉnh cho nhóm/phòng ban. Record mode để ghi lại cuộc họp và tóm tắt
+                    {t("businessFeatures.collaboration.desc2")}
                   </p>
                 </div>
                 </div>
@@ -280,14 +280,14 @@ export default function Home() {
                 <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
                 <div className="flex items-start mb-3">
                   <i className="fas fa-check-circle text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">Tuân thủ tiêu chuẩn</h3>
+                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.compliance.title")}</h3>
                 </div>
                 <div className="flex-grow">
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    SAML SSO, MFA, vai trò admin, xác minh domain
+                    {t("businessFeatures.compliance.desc1")}
                   </p>
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    SOC 2 Type 2, ISO 27001/27017/27018/27701. Hỗ trợ lựa chọn vùng dữ liệu (US, EU, UK, JP, CA, KR, SG, IN, AU, UAE)
+                    {t("businessFeatures.compliance.desc2")}
                   </p>
                 </div>
                 </div>
@@ -297,14 +297,14 @@ export default function Home() {
                 <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 md:col-span-2 lg:col-span-1 hover-lift h-full flex flex-col">
                 <div className="flex items-start mb-3">
                   <i className="fas fa-dollar-sign text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">Giá & thanh toán</h3>
+                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.pricing.title")}</h3>
                 </div>
                 <div className="flex-grow">
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    Khoảng US$30/người/tháng (thanh toán theo tháng) hoặc US$25/người/tháng (thanh toán theo năm)
+                    {t("businessFeatures.pricing.desc1")}
                   </p>
                   <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    Thanh toán linh hoạt, có thể thêm/chuyển số lượng chỗ (seats) trong tháng
+                    {t("businessFeatures.pricing.desc2")}
                   </p>
                 </div>
                 </div>

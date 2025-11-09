@@ -30,7 +30,41 @@
   },
   "businessFeatures": {
     "title": "Các tính năng nổi bật",
-    "description": "Khám phá những tính năng mạnh mẽ dành cho doanh nghiệp"
+    "description": "Khám phá những tính năng mạnh mẽ dành cho doanh nghiệp",
+    "security": {
+      "title": "Bảo mật dữ liệu",
+      "desc1": "Không dùng dữ liệu để huấn luyện mô hình của OpenAI",
+      "desc2": "Dữ liệu được mã hóa cả \"at rest\" và \"in transit\""
+    },
+    "workspace": {
+      "title": "Workspace doanh nghiệp",
+      "desc1": "Gói Business dành cho tối thiểu 2 người dùng trở lên",
+      "desc2": "Quản lý thành viên, phân quyền, kiểm soát admin. Chia sẻ dự án và GPT tùy chỉnh trong workspace"
+    },
+    "aiModels": {
+      "title": "Mô hình AI nâng cao",
+      "desc1": "Truy cập các mô hình \"frontier\" như GPT-4 với mức sử dụng không giới hạn (có guardrails)",
+      "desc2": "Data analysis, Code edits, File uploads, Vision được hỗ trợ tốt hơn"
+    },
+    "connectors": {
+      "title": "Connectors",
+      "description": "Kết nối tới Gmail, Outlook, SharePoint, Google Drive để ChatGPT có thể truy vấn dữ liệu doanh nghiệp"
+    },
+    "collaboration": {
+      "title": "Cộng tác nhóm",
+      "desc1": "Hỗ trợ Projects, Tasks trong workspace",
+      "desc2": "Tạo & chia sẻ GPTs tùy chỉnh cho nhóm/phòng ban. Record mode để ghi lại cuộc họp và tóm tắt"
+    },
+    "compliance": {
+      "title": "Tuân thủ tiêu chuẩn",
+      "desc1": "SAML SSO, MFA, vai trò admin, xác minh domain",
+      "desc2": "SOC 2 Type 2, ISO 27001/27017/27018/27701. Hỗ trợ lựa chọn vùng dữ liệu (US, EU, UK, JP, CA, KR, SG, IN, AU, UAE)"
+    },
+    "pricing": {
+      "title": "Giá & thanh toán",
+      "desc1": "Khoảng US$30/người/tháng (thanh toán theo tháng) hoặc US$25/người/tháng (thanh toán theo năm)",
+      "desc2": "Thanh toán linh hoạt, có thể thêm/chuyển số lượng chỗ (seats) trong tháng"
+    }
   },
   "testimonials": {
     "title": "Được yêu thích bởi các nhà sáng tạo & lập trình viên",

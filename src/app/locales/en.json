@@ -30,7 +30,41 @@
   },
   "businessFeatures": {
     "title": "Outstanding Features",
-    "description": "Discover powerful features for businesses"
+    "description": "Discover powerful features for businesses",
+    "security": {
+      "title": "Data Security",
+      "desc1": "Does not use data to train OpenAI models",
+      "desc2": "Data is encrypted both \"at rest\" and \"in transit\""
+    },
+    "workspace": {
+      "title": "Enterprise Workspace",
+      "desc1": "Business plan for a minimum of 2 users",
+      "desc2": "Member management, role assignment, admin control. Share projects and custom GPTs within the workspace"
+    },
+    "aiModels": {
+      "title": "Advanced AI Models",
+      "desc1": "Access \"frontier\" models like GPT-4 with unlimited usage (with guardrails)",
+      "desc2": "Data analysis, Code edits, File uploads, Vision are better supported"
+    },
+    "connectors": {
+      "title": "Connectors",
+      "description": "Connects to Gmail, Outlook, SharePoint, Google Drive so ChatGPT can query enterprise data"
+    },
+    "collaboration": {
+      "title": "Team Collaboration",
+      "desc1": "Supports Projects, Tasks within the workspace",
+      "desc2": "Create & share custom GPTs for teams/departments. Record mode to record and summarize meetings"
+    },
+    "compliance": {
+      "title": "Standard Compliance",
+      "desc1": "SAML SSO, MFA, admin roles, domain verification",
+      "desc2": "SOC 2 Type 2, ISO 27001/27017/27018/27701. Supports data region selection (US, EU, UK, JP, CA, KR, SG, IN, AU, UAE)"
+    },
+    "pricing": {
+      "title": "Pricing & Payment",
+      "desc1": "Approximately US$30/user/month (monthly payment) or US$25/user/month (annual payment)",
+      "desc2": "Flexible payment, can add/transfer number of seats within the month"
+    }
   },
   "testimonials": {
     "title": "Loved by Creators & Developers",
