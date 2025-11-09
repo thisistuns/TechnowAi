@@ -1,9 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "../hooks/useTranslation";
+import DarkModeToggle from "./DarkModeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -28,23 +32,29 @@ export default function MobileMenu() {
                 href="#features"
                 onClick={() => setIsOpen(false)}
               >
-                Tính năng
+                {t("nav.features")}
               </a>
               <a
                 className="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors py-2"
                 href="#testimonials"
                 onClick={() => setIsOpen(false)}
               >
-                Đánh giá
+                {t("nav.testimonials")}
               </a>
               <a
                 className="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors py-2"
                 href="#faq"
                 onClick={() => setIsOpen(false)}
               >
-                Câu hỏi thường gặp
+                {t("nav.faq")}
               </a>
-              <div className="flex flex-col gap-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+              <div className="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-800">
+                <div className="flex items-center gap-2">
+                  <LanguageSwitcher />
+                  <DarkModeToggle />
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 pt-2">
                 <a
                   className="bg-primary text-white font-semibold px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity text-center"
                   href="https://www.facebook.com/technowIT.vn"
@@ -52,7 +62,7 @@ export default function MobileMenu() {
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                 >
-                  Đăng ký ngay
+                  {t("nav.register")}
                 </a>
               </div>
             </nav>

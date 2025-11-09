@@ -1,11 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import ScrollReveal from "./components/ScrollReveal";
 import MobileMenu from "./components/MobileMenu";
 import FloatingChatButton from "./components/FloatingChatButton";
 import BackToTop from "./components/BackToTop";
 import ScrollProgress from "./components/ScrollProgress";
+import DarkModeToggle from "./components/DarkModeToggle";
+import LanguageSwitcher from "./components/LanguageSwitcher";
+import { useTranslation } from "./hooks/useTranslation";
 
 export default function Home() {
+  const { t, mounted } = useTranslation();
+
+  if (!mounted) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
       <ScrollProgress />
@@ -37,30 +52,36 @@ export default function Home() {
               className="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
               href="#features"
             >
-              Tính năng
+              {t("nav.features")}
             </a>
             <a
               className="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
               href="#testimonials"
             >
-              Đánh giá
+              {t("nav.testimonials")}
             </a>
             <a
               className="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
               href="#faq"
             >
-              Câu hỏi thường gặp
+              {t("nav.faq")}
             </a>
           </div>
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2">
+            <LanguageSwitcher />
+            <DarkModeToggle />
             <a
               className="bg-primary text-white font-semibold px-4 py-2 rounded-md hover:opacity-90 transition-opacity shadow-lg shadow-primary/30 text-sm"
               href="https://www.facebook.com/technowIT.vn"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Đăng ký ngay
+              {t("nav.register")}
             </a>
+          </div>
+          <div className="flex md:hidden items-center gap-2">
+            <LanguageSwitcher />
+            <DarkModeToggle />
           </div>
           <MobileMenu />
         </nav>
@@ -74,20 +95,19 @@ export default function Home() {
           <div className="container mx-auto px-6 text-center">
             <ScrollReveal delay={0}>
               <span className="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full mb-4 animate-fade-in">
-                Khơi dậy tiềm năng của bạn
+                {t("hero.badge")}
               </span>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <h1 className="text-4xl md:text-6xl font-bold text-text-light dark:text-text-dark leading-tight mb-4 animate-fade-in-up">
-                Trải nghiệm sức mạnh đầy đủ của
+                {t("hero.title")}
                 <br className="hidden md:block" /> AI với{" "}
-                <span className="text-primary">ChatGPT Plus</span>
+                <span className="text-primary">{t("hero.titleHighlight")}</span>
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-lg md:text-xl max-w-3xl mx-auto text-text-muted-light dark:text-text-muted-dark mb-8 animate-fade-in-up">
-                Nhận tốc độ phản hồi nhanh hơn, ưu tiên truy cập các tính năng mới và
-                truy cập ổn định, ngay cả trong giờ cao điểm.
+                {t("hero.description")}
               </p>
             </ScrollReveal>
             <ScrollReveal delay={300}>
@@ -95,10 +115,10 @@ export default function Home() {
                 <a
                   className="w-full sm:w-auto bg-primary text-white font-bold text-lg px-8 py-4 rounded-lg hover:opacity-90 transition-all duration-300 shadow-xl shadow-primary/30 flex items-center justify-center gap-2 hover-lift hover-glow animate-pulse-slow"
                   href="#pricing"
-                  aria-label="Nâng cấp lên ChatGPT Plus với giá 69,000 VND mỗi tháng"
+                  aria-label={t("hero.cta")}
                 >
                   <i className="fas fa-bolt" aria-hidden="true"></i>
-                  Nâng cấp với 69,000 VND/tháng
+                  {t("hero.cta")}
                 </a>
               </div>
             </ScrollReveal>
@@ -110,11 +130,10 @@ export default function Home() {
             <ScrollReveal delay={0}>
               <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 md:mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-                  Tại sao nên chọn Plus?
+                  {t("features.title")}
                 </h2>
                 <p className="text-base sm:text-lg text-text-muted-light dark:text-text-muted-dark px-4">
-                  Mở khóa bộ tính năng mạnh mẽ được thiết kế để tăng cường
-                  năng suất và sáng tạo của bạn.
+                  {t("features.description")}
                 </p>
               </div>
             </ScrollReveal>
@@ -125,11 +144,10 @@ export default function Home() {
                   <i className="fas fa-bolt text-2xl sm:text-3xl"></i>
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-2">
-                  Tốc độ phản hồi nhanh hơn
+                  {t("features.speed.title")}
                 </h3>
                 <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark flex-grow">
-                  Trải nghiệm phản hồi nhanh hơn đáng kể, cho phép bạn
-                  lặp lại nhanh hơn và hoàn thành nhiều việc hơn trong thời gian ngắn hơn.
+                  {t("features.speed.description")}
                 </p>
                 </div>
               </ScrollReveal>
@@ -139,11 +157,10 @@ export default function Home() {
                     <i className="fas fa-clock text-2xl sm:text-3xl"></i>
                   </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-2">
-                  Truy cập trong giờ cao điểm
+                  {t("features.access.title")}
                 </h3>
                 <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark flex-grow">
-                  Đừng để lưu lượng truy cập cao làm chậm bạn. Người đăng ký Plus nhận được
-                  truy cập ổn định, ngay cả khi nhu cầu cao.
+                  {t("features.access.description")}
                 </p>
                 </div>
               </ScrollReveal>
@@ -153,11 +170,10 @@ export default function Home() {
                     <i className="fas fa-star text-2xl sm:text-3xl"></i>
                   </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-2">
-                  Ưu tiên truy cập tính năng mới
+                  {t("features.priority.title")}
                 </h3>
                 <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark flex-grow">
-                  Là người đầu tiên trải nghiệm các cải tiến mới nhất và
-                  các tính năng tiên tiến ngay khi chúng được phát hành.
+                  {t("features.priority.description")}
                 </p>
                 </div>
               </ScrollReveal>

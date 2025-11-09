@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "features": "Features",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "register": "Register Now"
+  },
+  "hero": {
+    "badge": "Unlock Your Potential",
+    "title": "Experience the Full Power of",
+    "titleHighlight": "ChatGPT Plus",
+    "description": "Get faster response times, priority access to new features, and stable access even during peak hours.",
+    "cta": "Upgrade for 69,000 VND/month"
+  },
+  "features": {
+    "title": "Why Choose Plus?",
+    "description": "Unlock a powerful set of features designed to enhance your productivity and creativity.",
+    "speed": {
+      "title": "Faster Response Speed",
+      "description": "Experience significantly faster responses, allowing you to iterate faster and complete more tasks in less time."
+    },
+    "access": {
+      "title": "Access During Peak Hours",
+      "description": "Don't let high traffic slow you down. Plus subscribers get stable access, even during high demand."
+    },
+    "priority": {
+      "title": "Priority Access to New Features",
+      "description": "Be the first to experience the latest improvements and advanced features as soon as they are released."
+    }
+  },
+  "footer": {
+    "about": "About Technow",
+    "aboutDescription": "Making advanced technology accessible to everyone.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect With Us",
+    "copyright": "© 2024 Technow. All rights reserved."
+  }
+}
+
