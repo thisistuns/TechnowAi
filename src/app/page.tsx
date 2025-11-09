@@ -2,11 +2,14 @@ import Image from "next/image";
 import ScrollReveal from "./components/ScrollReveal";
 import MobileMenu from "./components/MobileMenu";
 import FloatingChatButton from "./components/FloatingChatButton";
+import BackToTop from "./components/BackToTop";
+import ScrollProgress from "./components/ScrollProgress";
 
 export default function Home() {
   return (
     <div className="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
-      <header className="sticky top-0 z-50 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+      <ScrollProgress />
+      <header className="sticky top-[1px] z-40 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
         <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <svg
@@ -496,14 +499,80 @@ export default function Home() {
       </main>
 
       <footer className="bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800">
-        <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8 text-center text-text-muted-light dark:text-text-muted-dark">
-          <p className="text-sm sm:text-base">© 2024 Technow. Bảo lưu mọi quyền.</p>
-          <p className="text-xs sm:text-sm mt-2">
-            Làm cho công nghệ tiên tiến trở nên dễ tiếp cận với mọi người.
-          </p>
+        <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-text-light dark:text-text-dark">
+                Về Technow
+              </h3>
+              <p className="text-sm text-text-muted-light dark:text-text-muted-dark">
+                Làm cho công nghệ tiên tiến trở nên dễ tiếp cận với mọi người.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-text-light dark:text-text-dark">
+                Liên kết nhanh
+              </h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a
+                    href="#features"
+                    className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                  >
+                    Tính năng
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#testimonials"
+                    className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                  >
+                    Đánh giá
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#faq"
+                    className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                  >
+                    Câu hỏi thường gặp
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-text-light dark:text-text-dark">
+                Kết nối với chúng tôi
+              </h3>
+              <div className="flex space-x-4">
+                <a
+                  href="https://www.facebook.com/technowIT.vn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                  aria-label="Facebook"
+                >
+                  <i className="fab fa-facebook text-2xl"></i>
+                </a>
+                <a
+                  href="https://m.me/technowIT.vn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+                  aria-label="Messenger"
+                >
+                  <i className="fab fa-facebook-messenger text-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-slate-200 dark:border-slate-800 pt-6 text-center text-text-muted-light dark:text-text-muted-dark">
+            <p className="text-sm sm:text-base">© 2024 Technow. Bảo lưu mọi quyền.</p>
+          </div>
         </div>
       </footer>
 
+      <BackToTop />
       <FloatingChatButton />
     </div>
   );
