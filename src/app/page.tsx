@@ -63,7 +63,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <section
           className="py-20 sm:py-28 bg-surface-light dark:bg-surface-dark"
           id="hero"
@@ -92,8 +92,9 @@ export default function Home() {
                 <a
                   className="w-full sm:w-auto bg-primary text-white font-bold text-lg px-8 py-4 rounded-lg hover:opacity-90 transition-all duration-300 shadow-xl shadow-primary/30 flex items-center justify-center gap-2 hover-lift hover-glow animate-pulse-slow"
                   href="#pricing"
+                  aria-label="Nâng cấp lên ChatGPT Plus với giá 69,000 VND mỗi tháng"
                 >
-                  <i className="fas fa-bolt"></i>
+                  <i className="fas fa-bolt" aria-hidden="true"></i>
                   Nâng cấp với 69,000 VND/tháng
                 </a>
               </div>
@@ -344,11 +345,12 @@ export default function Home() {
                   </p>
                   <div className="flex items-center">
                     <Image
-                      alt="Ảnh đại diện của Lê Bình"
+                      alt="Ảnh đại diện của Lê Bình - Chiến lược gia nội dung"
                       className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf4M4FCDjGStrXzK9px8ZsC8NkgSLZJR5zcm7jHG0rA8BWHOx6tVhC5wkTJFcY82NSaaMWQWD1kI3X3CGjjYBlNMkxv2XjfkkhVekUwk8o2PtvHlD8RIVm7ZvLp7jIMhNtDuuY5_nD7CKEFdVNrBOh9u0--kwDcyt5czA7F2WONg_7ZT7BEjzEap4BbHEbWIGmtafxppUzFcuzBXXsKdNBiOwRLLbXrKGAN7rwR7MutLyrNw2Z4f1JPLFa6ZxBnizL2MdvF2PVG3c"
                       width={48}
                       height={48}
+                      loading="lazy"
                       unoptimized
                     />
                     <div>
@@ -369,11 +371,12 @@ export default function Home() {
                   </p>
                   <div className="flex items-center">
                     <Image
-                      alt="Ảnh đại diện của Phạm Chi"
+                      alt="Ảnh đại diện của Phạm Chi - Nhà thiết kế UX"
                       className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU4-UnGx6tALowndml21BoNeNC6Di_VBCh3otAvRMXZeUfKWuWlaKNVL8Empj4qDnV_sbvDvnx7y-sw9ZIrXcx4jXCuDJbul859g7_Gj3qEt28cb5ho5EOoqmhs258QwHMzChy2kpiUhc0kOxsTJrkbe9iLqh8bZjDGF0ahQdhR73jUF1eEbD_uX6b6szXX09STAXlnKSBvBoUNvcWXeO8MGT8CuYNG2qU1c2hRxDDIVXoWiQp72gRTg3cZZlthJofVfufO2FvgVY"
                       width={48}
                       height={48}
+                      loading="lazy"
                       unoptimized
                     />
                     <div>
