@@ -4,7 +4,7 @@ import { useState } from "react";
 import viTranslations from "../locales/vi.json";
 import enTranslations from "../locales/en.json";
 
-type Locale = "vi" | "en";
+export type Locale = "vi" | "en";
 
 interface Translations {
   [key: string]: string | Translations;

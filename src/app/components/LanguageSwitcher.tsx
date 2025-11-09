@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useTranslation } from "../hooks/useTranslation";
+import { useTranslation, type Locale } from "../hooks/useTranslation";
 
 export default function LanguageSwitcher() {
   const { locale, changeLocale, mounted } = useTranslation();
@@ -39,7 +39,7 @@ export default function LanguageSwitcher() {
   }, [isOpen]);
 
   // Handle locale change
-  const handleLocaleChange = (newLocale: string) => {
+  const handleLocaleChange = (newLocale: Locale) => {
     changeLocale(newLocale);
     setIsOpen(false);
   };
