@@ -510,15 +510,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="font-bold text-lg mb-4 text-text-light dark:text-text-dark">
-                Về Technow
+                {t("footer.about")}
               </h3>
               <p className="text-sm text-text-muted-light dark:text-text-muted-dark">
-                Làm cho công nghệ tiên tiến trở nên dễ tiếp cận với mọi người.
+                {t("footer.aboutDescription")}
               </p>
             </div>
             <div>
               <h3 className="font-bold text-lg mb-4 text-text-light dark:text-text-dark">
-                Liên kết nhanh
+                {t("footer.quickLinks")}
               </h3>
               <ul className="space-y-2 text-sm">
                 <li>
@@ -526,7 +526,7 @@ export default function Home() {
                     href="#features"
                     className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
                   >
-                    Tính năng
+                    {t("nav.features")}
                   </a>
                 </li>
                 <li>
@@ -534,7 +534,7 @@ export default function Home() {
                     href="#testimonials"
                     className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
                   >
-                    Đánh giá
+                    {t("nav.testimonials")}
                   </a>
                 </li>
                 <li>
@@ -542,14 +542,14 @@ export default function Home() {
                     href="#faq"
                     className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
                   >
-                    Câu hỏi thường gặp
+                    {t("nav.faq")}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="font-bold text-lg mb-4 text-text-light dark:text-text-dark">
-                Kết nối với chúng tôi
+                {t("footer.connect")}
               </h3>
               <div className="flex space-x-4">
                 <a
@@ -574,7 +574,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-slate-200 dark:border-slate-800 pt-6 text-center text-text-muted-light dark:text-text-muted-dark">
-            <p className="text-sm sm:text-base">© 2024 Technow. Bảo lưu mọi quyền.</p>
+            <p className="text-sm sm:text-base">{t("footer.copyright")}</p>
           </div>
         </div>
       </footer>
