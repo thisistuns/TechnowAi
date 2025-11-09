@@ -28,6 +28,38 @@
       "description": "Be the first to experience the latest improvements and advanced features as soon as they are released."
     }
   },
+  "businessFeatures": {
+    "title": "Outstanding Features",
+    "description": "Discover powerful features for businesses"
+  },
+  "testimonials": {
+    "title": "Loved by Creators & Developers",
+    "description": "See what our Plus subscribers say about their upgraded experience."
+  },
+  "pricing": {
+    "title": "Ready to Upgrade Your Experience?",
+    "description": "Join thousands of users enhancing their productivity with ChatGPT Plus.",
+    "price": "69,000 VND",
+    "period": "per month",
+    "cta": "Subscribe Today",
+    "note": "Cancel anytime. Secure payment."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Have questions? We have answers.",
+    "q1": {
+      "question": "What do I get with ChatGPT Plus subscription?",
+      "answer": "With ChatGPT Plus, you get faster response times, stable access even during peak hours, and priority access to new features and improvements."
+    },
+    "q2": {
+      "question": "How does Technow handle subscriptions?",
+      "answer": "Technow acts as a local payment gateway, making it easy for you to subscribe using local payment methods. We manage payments so you can enjoy uninterrupted access."
+    },
+    "q3": {
+      "question": "Can I cancel my subscription anytime?",
+      "answer": "Yes, absolutely. You can manage and cancel your subscription anytime through your Technow account dashboard. Your subscription will remain active until the end of your current billing cycle."
+    }
+  },
   "footer": {
     "about": "About Technow",
     "aboutDescription": "Making advanced technology accessible to everyone.",

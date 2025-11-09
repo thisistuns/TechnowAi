@@ -28,6 +28,38 @@
       "description": "Là người đầu tiên trải nghiệm các cải tiến mới nhất và các tính năng tiên tiến ngay khi chúng được phát hành."
     }
   },
+  "businessFeatures": {
+    "title": "Các tính năng nổi bật",
+    "description": "Khám phá những tính năng mạnh mẽ dành cho doanh nghiệp"
+  },
+  "testimonials": {
+    "title": "Được yêu thích bởi các nhà sáng tạo & lập trình viên",
+    "description": "Xem những gì người đăng ký Plus của chúng tôi nói về trải nghiệm được nâng cấp của họ."
+  },
+  "pricing": {
+    "title": "Sẵn sàng nâng cấp trải nghiệm của bạn?",
+    "description": "Tham gia cùng hàng nghìn người dùng đang tăng cường năng suất với ChatGPT Plus.",
+    "price": "69,000 VND",
+    "period": "mỗi tháng",
+    "cta": "Đăng ký ngay hôm nay",
+    "note": "Hủy bất cứ lúc nào. Thanh toán an toàn."
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "description": "Có câu hỏi? Chúng tôi có câu trả lời.",
+    "q1": {
+      "question": "Tôi nhận được gì với gói đăng ký ChatGPT Plus?",
+      "answer": "Với ChatGPT Plus, bạn nhận được tốc độ phản hồi nhanh hơn, truy cập ổn định ngay cả trong giờ cao điểm, và ưu tiên truy cập các tính năng và cải tiến mới."
+    },
+    "q2": {
+      "question": "Technow xử lý đăng ký như thế nào?",
+      "answer": "Technow hoạt động như một cổng thanh toán địa phương, giúp bạn dễ dàng đăng ký bằng các phương thức thanh toán địa phương. Chúng tôi quản lý thanh toán để bạn có thể tận hưởng truy cập không gián đoạn."
+    },
+    "q3": {
+      "question": "Tôi có thể hủy đăng ký bất cứ lúc nào không?",
+      "answer": "Có, hoàn toàn có thể. Bạn có thể quản lý và hủy đăng ký của mình bất cứ lúc nào thông qua bảng điều khiển tài khoản Technow của bạn. Đăng ký của bạn sẽ vẫn hoạt động cho đến cuối chu kỳ thanh toán hiện tại."
+    }
+  },
   "footer": {
     "about": "Về Technow",
     "aboutDescription": "Làm cho công nghệ tiên tiến trở nên dễ tiếp cận với mọi người.",

@@ -186,10 +186,10 @@ export default function Home() {
             <ScrollReveal delay={0}>
               <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 md:mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-                  Các tính năng nổi bật
+                  {t("businessFeatures.title")}
                 </h2>
                 <p className="text-base sm:text-lg text-text-muted-light dark:text-text-muted-dark px-4">
-                  Khám phá những tính năng mạnh mẽ dành cho doanh nghiệp
+                  {t("businessFeatures.description")}
                 </p>
               </div>
             </ScrollReveal>
@@ -321,11 +321,10 @@ export default function Home() {
             <ScrollReveal delay={0}>
               <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 md:mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-                  Được yêu thích bởi các nhà sáng tạo & lập trình viên
+                  {t("testimonials.title")}
                 </h2>
                 <p className="text-base sm:text-lg text-text-muted-light dark:text-text-muted-dark px-4">
-                  Xem những gì người đăng ký Plus của chúng tôi nói về trải nghiệm
-                  được nâng cấp của họ.
+                  {t("testimonials.description")}
                 </p>
               </div>
             </ScrollReveal>
@@ -419,20 +418,19 @@ export default function Home() {
                 <div className="absolute -bottom-12 -right-10 w-36 h-36 sm:w-48 sm:h-48 bg-primary/20 rounded-full animate-float stagger-2"></div>
                 <ScrollReveal delay={100}>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 z-10 relative animate-fade-in-up px-4">
-                    Sẵn sàng nâng cấp trải nghiệm của bạn?
+                    {t("pricing.title")}
                   </h2>
                 </ScrollReveal>
                 <ScrollReveal delay={200}>
                   <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-6 sm:mb-8 z-10 relative animate-fade-in-up px-4">
-                    Tham gia cùng hàng nghìn người dùng đang tăng cường năng suất với
-                    ChatGPT Plus.
+                    {t("pricing.description")}
                   </p>
                 </ScrollReveal>
                 <ScrollReveal delay={300}>
                   <div className="bg-white/10 backdrop-blur-sm border border-white/20 inline-flex flex-col sm:flex-row items-center p-3 sm:p-2 rounded-lg mb-6 sm:mb-8 z-10 relative hover-lift mx-4">
-                    <span className="font-bold text-xl sm:text-2xl px-3 sm:px-4">69,000 VND</span>
+                    <span className="font-bold text-xl sm:text-2xl px-3 sm:px-4">{t("pricing.price")}</span>
                     <span className="text-slate-300 px-3 sm:px-4 sm:border-l sm:border-t border-white/20 sm:border-t-0 mt-2 sm:mt-0">
-                      mỗi tháng
+                      {t("pricing.period")}
                     </span>
                   </div>
                 </ScrollReveal>
@@ -444,10 +442,10 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Đăng ký ngay hôm nay
+                      {t("pricing.cta")}
                     </a>
                     <p className="text-xs sm:text-sm text-slate-400 mt-3 sm:mt-4 z-10 relative">
-                      Hủy bất cứ lúc nào. Thanh toán an toàn.
+                      {t("pricing.note")}
                     </p>
                   </div>
                 </ScrollReveal>
@@ -461,10 +459,10 @@ export default function Home() {
             <ScrollReveal delay={0}>
               <div className="text-center mb-10 sm:mb-12 md:mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
-                  Câu hỏi thường gặp
+                  {t("faq.title")}
                 </h2>
                 <p className="text-base sm:text-lg text-text-muted-light dark:text-text-muted-dark px-4">
-                  Có câu hỏi? Chúng tôi có câu trả lời.
+                  {t("faq.description")}
                 </p>
               </div>
             </ScrollReveal>
@@ -472,40 +470,33 @@ export default function Home() {
               <ScrollReveal delay={100}>
                 <details className="group bg-surface-light dark:bg-surface-dark p-5 sm:p-6 rounded-lg border border-slate-200 dark:border-slate-800 hover-lift" open>
                   <summary className="flex items-center justify-between cursor-pointer font-semibold text-base sm:text-lg">
-                    <span className="pr-4">Tôi nhận được gì với gói đăng ký ChatGPT Plus?</span>
+                    <span className="pr-4">{t("faq.q1.question")}</span>
                     <i className="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180 flex-shrink-0"></i>
                   </summary>
                   <p className="mt-3 sm:mt-4 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark">
-                    Với ChatGPT Plus, bạn nhận được tốc độ phản hồi nhanh hơn, truy cập
-                    ổn định ngay cả trong giờ cao điểm, và ưu tiên truy cập các tính năng
-                    và cải tiến mới.
+                    {t("faq.q1.answer")}
                   </p>
                 </details>
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <details className="group bg-surface-light dark:bg-surface-dark p-5 sm:p-6 rounded-lg border border-slate-200 dark:border-slate-800 hover-lift">
                   <summary className="flex items-center justify-between cursor-pointer font-semibold text-base sm:text-lg">
-                    <span className="pr-4">Technow xử lý đăng ký như thế nào?</span>
+                    <span className="pr-4">{t("faq.q2.question")}</span>
                     <i className="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180 flex-shrink-0"></i>
                   </summary>
                   <p className="mt-3 sm:mt-4 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark">
-                    Technow hoạt động như một cổng thanh toán địa phương, giúp bạn
-                    dễ dàng đăng ký bằng các phương thức thanh toán địa phương. Chúng tôi quản lý thanh toán
-                    để bạn có thể tận hưởng truy cập không gián đoạn.
+                    {t("faq.q2.answer")}
                   </p>
                 </details>
               </ScrollReveal>
               <ScrollReveal delay={300}>
                 <details className="group bg-surface-light dark:bg-surface-dark p-5 sm:p-6 rounded-lg border border-slate-200 dark:border-slate-800 hover-lift">
                   <summary className="flex items-center justify-between cursor-pointer font-semibold text-base sm:text-lg">
-                    <span className="pr-4">Tôi có thể hủy đăng ký bất cứ lúc nào không?</span>
+                    <span className="pr-4">{t("faq.q3.question")}</span>
                     <i className="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180 flex-shrink-0"></i>
                   </summary>
                   <p className="mt-3 sm:mt-4 text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark">
-                    Có, hoàn toàn có thể. Bạn có thể quản lý và hủy đăng ký của mình
-                    bất cứ lúc nào thông qua bảng điều khiển tài khoản Technow của bạn. Đăng ký
-                    của bạn sẽ vẫn hoạt động cho đến cuối chu kỳ
-                    thanh toán hiện tại.
+                    {t("faq.q3.answer")}
                   </p>
                 </details>
               </ScrollReveal>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useLayoutEffect } from "react";
+import { useState } from "react";
 
 export default function DarkModeToggle() {
   const [isDark, setIsDark] = useState(() => {
@@ -19,15 +19,6 @@ export default function DarkModeToggle() {
     return shouldBeDark;
   });
   const [mounted] = useState(() => typeof window !== "undefined");
-
-  // Use useLayoutEffect để apply theme class khi isDark thay đổi
-  useLayoutEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDark]);
 
   const toggleDarkMode = () => {
     const newIsDark = !isDark;
