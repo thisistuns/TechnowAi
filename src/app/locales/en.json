@@ -3,7 +3,9 @@
     "features": "Features",
     "testimonials": "Testimonials",
     "faq": "FAQ",
-    "register": "Register Now"
+    "register": "Register Now",
+    "language": "Language",
+    "theme": "Theme"
   },
   "hero": {
     "badge": "Unlock Your Potential",

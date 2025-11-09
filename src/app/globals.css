@@ -286,3 +286,23 @@ body {
   fill: currentColor;
 }
 
+/* Mobile touch optimization */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improve tap targets for mobile - only for interactive elements with touch-manipulation class */
+@media (max-width: 640px) {
+  button.touch-manipulation,
+  a.touch-manipulation {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Ensure dropdowns are above mobile menu */
+.dropdown-menu {
+  z-index: 100 !important;
+}
+

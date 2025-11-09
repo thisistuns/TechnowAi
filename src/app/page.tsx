@@ -82,8 +82,8 @@ export default function Home() {
           <div className="flex md:hidden items-center gap-2">
             <LanguageSwitcher />
             <DarkModeToggle />
+            <MobileMenu />
           </div>
-          <MobileMenu />
         </nav>
       </header>
 
