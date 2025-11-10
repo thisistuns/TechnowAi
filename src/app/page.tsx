@@ -109,7 +109,7 @@ export default function Home() {
 
       <main id="main-content" tabIndex={-1}>
         <section
-          className="py-20 sm:py-28 bg-surface-light dark:bg-surface-dark"
+          className="py-20 sm:py-28 bg-background-light dark:bg-background-dark"
           id="hero"
         >
           <div className="container mx-auto px-6 text-center">
@@ -147,7 +147,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-12 sm:py-16 md:py-20 lg:py-28" id="features">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-background-light dark:bg-background-dark" id="features">
           <div className="container mx-auto px-4 sm:px-6">
             <ScrollReveal delay={0}>
               <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 md:mb-16">
@@ -161,7 +161,7 @@ export default function Home() {
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
               <ScrollReveal delay={100}>
-                <AnimatedCard hoverEffect="lift" className="p-6 sm:p-8 h-full flex flex-col">
+                <AnimatedCard hoverEffect="lift" className="p-6 sm:p-8 h-full flex flex-col bg-surface-light dark:bg-surface-dark">
                   <div className="bg-primary/10 text-primary rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-4 sm:mb-5">
                     <i className="fas fa-bolt text-2xl sm:text-3xl"></i>
                   </div>
@@ -174,7 +174,7 @@ export default function Home() {
                 </AnimatedCard>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <AnimatedCard hoverEffect="glow" className="p-6 sm:p-8 h-full flex flex-col">
+                <AnimatedCard hoverEffect="glow" className="p-6 sm:p-8 h-full flex flex-col bg-surface-light dark:bg-surface-dark">
                   <div className="bg-primary/10 text-primary rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-4 sm:mb-5 animate-float">
                     <i className="fas fa-clock text-2xl sm:text-3xl"></i>
                   </div>
@@ -187,7 +187,7 @@ export default function Home() {
                 </AnimatedCard>
               </ScrollReveal>
               <ScrollReveal delay={300}>
-                <AnimatedCard hoverEffect="scale" className="p-6 sm:p-8 h-full flex flex-col">
+                <AnimatedCard hoverEffect="scale" className="p-6 sm:p-8 h-full flex flex-col bg-surface-light dark:bg-surface-dark">
                   <div className="bg-primary/10 text-primary rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-4 sm:mb-5 animate-float stagger-1">
                     <i className="fas fa-star text-2xl sm:text-3xl"></i>
                   </div>
@@ -352,7 +352,7 @@ export default function Home() {
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               <ScrollReveal delay={100}>
-                <AnimatedCard hoverEffect="lift" className="p-6 sm:p-8">
+                <AnimatedCard hoverEffect="lift" className="p-6 sm:p-8 bg-background-light dark:bg-background-dark">
                   <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6">
                     &quot;Chỉ riêng việc tăng tốc độ đã đáng giá với gói đăng ký. Quy trình làm việc
                     của tôi đã trở nên hiệu quả hơn rất nhiều. Rất đáng
@@ -377,7 +377,7 @@ export default function Home() {
                 </AnimatedCard>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <AnimatedCard hoverEffect="glow" className="p-6 sm:p-8">
+                <AnimatedCard hoverEffect="glow" className="p-6 sm:p-8 bg-background-light dark:bg-background-dark">
                   <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6">
                     &quot;Là một người viết, việc được ưu tiên truy cập trong giờ cao điểm là
                     một cứu cánh. Không còn phải chờ đợi để có cảm hứng
@@ -403,7 +403,7 @@ export default function Home() {
                 </AnimatedCard>
               </ScrollReveal>
               <ScrollReveal delay={300}>
-                <AnimatedCard hoverEffect="scale" className="p-6 sm:p-8 md:col-span-2 lg:col-span-1">
+                <AnimatedCard hoverEffect="scale" className="p-6 sm:p-8 md:col-span-2 lg:col-span-1 bg-background-light dark:bg-background-dark">
                   <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6">
                     &quot;Được thử các tính năng mới trước tiên thật tuyệt vời. Cảm giác như
                     tôi đang ở tuyến đầu của AI, và Technow làm cho việc đăng ký
@@ -432,7 +432,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-12 sm:py-16 md:py-20 lg:py-28" id="pricing">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-background-light dark:bg-background-dark" id="pricing">
           <div className="container mx-auto px-4 sm:px-6">
             <ScrollReveal delay={0}>
               <div className="bg-brand-dark-blue rounded-xl p-6 sm:p-10 md:p-16 text-center text-white relative overflow-hidden">
@@ -477,7 +477,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-12 sm:py-16 md:py-20 lg:py-28" id="faq">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-28 bg-background-light dark:bg-background-dark" id="faq">
           <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
             <ScrollReveal delay={0}>
               <div className="text-center mb-10 sm:mb-12 md:mb-16">

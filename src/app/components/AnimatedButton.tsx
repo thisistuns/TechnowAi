@@ -41,10 +41,10 @@ export default function AnimatedButton({
   const buttonContent = (
     <>
       {/* Shine effect */}
-      <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
+      <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none"></span>
       
-      {/* Ripple effect */}
-      <span className="absolute inset-0 rounded-lg opacity-0 group-active:opacity-100 group-active:animate-ripple bg-white/30"></span>
+      {/* Ripple effect - sẽ được xử lý bằng JavaScript nếu cần */}
+      <span className="absolute inset-0 rounded-lg opacity-0 pointer-events-none"></span>
       
       {/* Content */}
       <span className="relative flex items-center gap-2 z-10">

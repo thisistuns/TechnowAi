@@ -17,12 +17,12 @@ export default function AnimatedCard({
 }: AnimatedCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const baseClasses = "bg-surface-light dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-slate-800 transition-all duration-300 relative overflow-hidden";
+  const baseClasses = "bg-background-light dark:bg-background-dark rounded-xl border border-slate-200 dark:border-slate-800 transition-all duration-300 relative overflow-hidden";
   
   const hoverEffects = {
     lift: "hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/20",
     glow: "hover:shadow-2xl hover:shadow-primary/30 hover:border-primary/50",
-    scale: "hover:scale-105 hover:shadow-xl",
+    scale: "hover:scale-[1.02] hover:shadow-xl",
     tilt: "hover:rotate-1 hover:shadow-xl",
   };
 
