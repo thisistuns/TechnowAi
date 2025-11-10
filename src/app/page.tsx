@@ -26,27 +26,44 @@ export default function Home() {
       <ScrollProgress />
       <header className="sticky top-[1px] z-40 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
         <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
+          <a href="#hero" className="flex items-center space-x-2 group">
             <svg
               fill="none"
               viewBox="0 0 262 50"
-              className="logo-svg h-7 w-28 sm:h-8 sm:w-[150px]"
+              className="logo-svg h-8 w-32 sm:h-10 sm:w-[180px] transition-all duration-300 group-hover:scale-105"
               xmlns="http://www.w3.org/2000/svg"
             >
+              <defs>
+                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#4A90E2" />
+                  <stop offset="100%" stopColor="#6B8DD6" />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
               <text
                 fontFamily="Poppins, sans-serif"
                 fontSize="40"
                 fontWeight="bold"
                 letterSpacing="0em"
                 style={{ whiteSpace: "pre" }}
+                filter="url(#glow)"
               >
-                <tspan x="0" y="40.8" fill="#4A90E2">
+                <tspan x="0" y="40.8" fill="url(#logoGradient)">
                   tech
                 </tspan>
-                <tspan className="logo-now-text">now</tspan>
+                <tspan className="logo-now-text" fill="url(#logoGradient)">now</tspan>
               </text>
             </svg>
-          </div>
+            <span className="hidden sm:inline-block text-xs font-semibold text-primary ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              AI Platform
+            </span>
+          </a>
           <div className="hidden md:flex items-center space-x-8">
             <a
               className="text-text-muted-light dark:text-text-muted-dark hover:text-primary dark:hover:text-primary transition-colors"
@@ -94,15 +111,53 @@ export default function Home() {
         >
           <div className="container mx-auto px-6 text-center">
             <ScrollReveal delay={0}>
-              <span className="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full mb-4 animate-fade-in">
-                {t("hero.badge")}
-              </span>
+              <div className="flex flex-col items-center mb-6">
+                <div className="mb-4">
+                  <svg
+                    fill="none"
+                    viewBox="0 0 262 50"
+                    className="logo-svg h-12 w-48 sm:h-16 sm:w-64 mx-auto logo-hero"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <defs>
+                      <linearGradient id="heroLogoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#4A90E2" />
+                        <stop offset="50%" stopColor="#6B8DD6" />
+                        <stop offset="100%" stopColor="#8B7FD4" />
+                      </linearGradient>
+                      <filter id="heroGlow">
+                        <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                        <feMerge>
+                          <feMergeNode in="coloredBlur"/>
+                          <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                      </filter>
+                    </defs>
+                    <text
+                      fontFamily="Poppins, sans-serif"
+                      fontSize="40"
+                      fontWeight="bold"
+                      letterSpacing="0em"
+                      style={{ whiteSpace: "pre" }}
+                      filter="url(#heroGlow)"
+                    >
+                      <tspan x="0" y="40.8" fill="url(#heroLogoGradient)">
+                        tech
+                      </tspan>
+                      <tspan className="logo-now-text" fill="url(#heroLogoGradient)">now</tspan>
+                    </text>
+                  </svg>
+                </div>
+                <span className="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full mb-4 animate-fade-in">
+                  {t("hero.badge")}
+                </span>
+              </div>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <h1 className="text-4xl md:text-6xl font-bold text-text-light dark:text-text-dark leading-tight mb-4 animate-fade-in-up">
                 {t("hero.title")}
                 <br className="hidden md:block" /> AI với{" "}
-                <span className="text-primary">{t("hero.titleHighlight")}</span>
+                <span className="text-primary bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">{t("hero.titleHighlight")}</span>
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={200}>
@@ -509,6 +564,34 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
+              <div className="mb-4">
+                <svg
+                  fill="none"
+                  viewBox="0 0 262 50"
+                  className="logo-svg h-8 w-40 sm:h-10 sm:w-48 mb-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#4A90E2" />
+                      <stop offset="100%" stopColor="#6B8DD6" />
+                    </linearGradient>
+                  </defs>
+                  <text
+                    fontFamily="Poppins, sans-serif"
+                    fontSize="40"
+                    fontWeight="bold"
+                    letterSpacing="0em"
+                    style={{ whiteSpace: "pre" }}
+                  >
+                    <tspan x="0" y="40.8" fill="url(#footerLogoGradient)">
+                      tech
+                    </tspan>
+                    <tspan className="logo-now-text" fill="url(#footerLogoGradient)">now</tspan>
+                  </text>
+                </svg>
+                <p className="text-xs text-primary font-semibold">AI Platform for Everyone</p>
+              </div>
               <h3 className="font-bold text-lg mb-4 text-text-light dark:text-text-dark">
                 {t("footer.about")}
               </h3>

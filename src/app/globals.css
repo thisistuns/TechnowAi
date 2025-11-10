@@ -270,6 +270,7 @@ body {
 /* Logo styling */
 .logo-svg {
   color: #1E293B;
+  transition: all 0.3s ease;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -284,6 +285,37 @@ body {
 
 .logo-now-text {
   fill: currentColor;
+  transition: fill 0.3s ease;
+}
+
+/* Hero logo animation */
+.logo-hero {
+  animation: logoPulse 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(74, 144, 226, 0.3));
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(74, 144, 226, 0.3));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 30px rgba(74, 144, 226, 0.5));
+  }
+}
+
+/* Logo glow effect */
+.logo-svg:hover {
+  filter: drop-shadow(0 0 15px rgba(74, 144, 226, 0.6));
+}
+
+/* Brand highlight */
+.brand-highlight {
+  background: linear-gradient(135deg, #4A90E2 0%, #6B8DD6 50%, #8B7FD4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Mobile touch optimization */
