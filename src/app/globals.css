@@ -63,10 +63,18 @@ body {
   background: var(--background-light);
   color: var(--text-light);
   font-family: var(--font-display);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark mode sử dụng class .dark trên html element */
+html.dark body {
+  background: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Fallback cho hệ thống nếu chưa có class dark được set */
 @media (prefers-color-scheme: dark) {
-  body {
+  html:not(.light-mode):not(.dark) body {
     background: var(--background-dark);
     color: var(--text-dark);
   }
@@ -276,14 +284,16 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo-svg {
-    color: #FFFFFF;
-  }
-}
-
+/* Dark mode cho logo */
 .dark .logo-svg {
   color: #FFFFFF;
+}
+
+/* Fallback cho hệ thống nếu chưa có class dark */
+@media (prefers-color-scheme: dark) {
+  html:not(.light-mode) .logo-svg {
+    color: #FFFFFF;
+  }
 }
 
 .logo-now-text {
