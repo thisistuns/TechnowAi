@@ -8,6 +8,9 @@ import BackToTop from "./components/BackToTop";
 import ScrollProgress from "./components/ScrollProgress";
 import DarkModeToggle from "./components/DarkModeToggle";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import AnimatedButton from "./components/AnimatedButton";
+import AnimatedCard from "./components/AnimatedCard";
+import AnimatedBadge from "./components/AnimatedBadge";
 import { useTranslation } from "./hooks/useTranslation";
 
 export default function Home() {
@@ -87,14 +90,14 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-2">
             <LanguageSwitcher />
             <DarkModeToggle />
-            <a
-              className="bg-primary text-white font-semibold px-4 py-2 rounded-md hover:opacity-90 transition-opacity shadow-lg shadow-primary/30 text-sm"
+            <AnimatedButton
               href="https://www.facebook.com/technowIT.vn"
-              target="_blank"
-              rel="noopener noreferrer"
+              variant="primary"
+              size="sm"
+              ariaLabel={t("nav.register")}
             >
               {t("nav.register")}
-            </a>
+            </AnimatedButton>
           </div>
           <div className="flex md:hidden items-center gap-2">
             <LanguageSwitcher />
@@ -111,47 +114,9 @@ export default function Home() {
         >
           <div className="container mx-auto px-6 text-center">
             <ScrollReveal delay={0}>
-              <div className="flex flex-col items-center mb-6">
-                <div className="mb-4">
-                  <svg
-                    fill="none"
-                    viewBox="0 0 262 50"
-                    className="logo-svg h-12 w-48 sm:h-16 sm:w-64 mx-auto logo-hero"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      <linearGradient id="heroLogoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#4A90E2" />
-                        <stop offset="50%" stopColor="#6B8DD6" />
-                        <stop offset="100%" stopColor="#8B7FD4" />
-                      </linearGradient>
-                      <filter id="heroGlow">
-                        <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                        <feMerge>
-                          <feMergeNode in="coloredBlur"/>
-                          <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                      </filter>
-                    </defs>
-                    <text
-                      fontFamily="Poppins, sans-serif"
-                      fontSize="40"
-                      fontWeight="bold"
-                      letterSpacing="0em"
-                      style={{ whiteSpace: "pre" }}
-                      filter="url(#heroGlow)"
-                    >
-                      <tspan x="0" y="40.8" fill="url(#heroLogoGradient)">
-                        tech
-                      </tspan>
-                      <tspan className="logo-now-text" fill="url(#heroLogoGradient)">now</tspan>
-                    </text>
-                  </svg>
-                </div>
-                <span className="inline-block bg-primary/10 text-primary font-semibold text-sm px-4 py-1.5 rounded-full mb-4 animate-fade-in">
-                  {t("hero.badge")}
-                </span>
-              </div>
+              <AnimatedBadge variant="primary" size="md" pulse className="mb-4">
+                {t("hero.badge")}
+              </AnimatedBadge>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <h1 className="text-4xl md:text-6xl font-bold text-text-light dark:text-text-dark leading-tight mb-4 animate-fade-in-up">
@@ -167,14 +132,16 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal delay={300}>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a
-                  className="w-full sm:w-auto bg-primary text-white font-bold text-lg px-8 py-4 rounded-lg hover:opacity-90 transition-all duration-300 shadow-xl shadow-primary/30 flex items-center justify-center gap-2 hover-lift hover-glow animate-pulse-slow"
+                <AnimatedButton
                   href="#pricing"
-                  aria-label={t("hero.cta")}
+                  variant="primary"
+                  size="lg"
+                  className="w-full sm:w-auto"
+                  ariaLabel={t("hero.cta")}
+                  icon={<i className="fas fa-bolt" aria-hidden="true"></i>}
                 >
-                  <i className="fas fa-bolt" aria-hidden="true"></i>
                   {t("hero.cta")}
-                </a>
+                </AnimatedButton>
               </div>
             </ScrollReveal>
           </div>
@@ -194,43 +161,43 @@ export default function Home() {
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
               <ScrollReveal delay={100}>
-                <div className="bg-surface-light dark:bg-surface-dark p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 hover-lift h-full flex flex-col">
-                <div className="bg-primary/10 text-primary rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-4 sm:mb-5">
-                  <i className="fas fa-bolt text-2xl sm:text-3xl"></i>
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2">
-                  {t("features.speed.title")}
-                </h3>
-                <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark flex-grow">
-                  {t("features.speed.description")}
-                </p>
-                </div>
+                <AnimatedCard hoverEffect="lift" className="p-6 sm:p-8 h-full flex flex-col">
+                  <div className="bg-primary/10 text-primary rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-4 sm:mb-5">
+                    <i className="fas fa-bolt text-2xl sm:text-3xl"></i>
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">
+                    {t("features.speed.title")}
+                  </h3>
+                  <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark flex-grow">
+                    {t("features.speed.description")}
+                  </p>
+                </AnimatedCard>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <div className="bg-surface-light dark:bg-surface-dark p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 hover-lift h-full flex flex-col">
+                <AnimatedCard hoverEffect="glow" className="p-6 sm:p-8 h-full flex flex-col">
                   <div className="bg-primary/10 text-primary rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-4 sm:mb-5 animate-float">
                     <i className="fas fa-clock text-2xl sm:text-3xl"></i>
                   </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2">
-                  {t("features.access.title")}
-                </h3>
-                <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark flex-grow">
-                  {t("features.access.description")}
-                </p>
-                </div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">
+                    {t("features.access.title")}
+                  </h3>
+                  <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark flex-grow">
+                    {t("features.access.description")}
+                  </p>
+                </AnimatedCard>
               </ScrollReveal>
               <ScrollReveal delay={300}>
-                <div className="bg-surface-light dark:bg-surface-dark p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 hover-lift h-full flex flex-col">
+                <AnimatedCard hoverEffect="scale" className="p-6 sm:p-8 h-full flex flex-col">
                   <div className="bg-primary/10 text-primary rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mb-4 sm:mb-5 animate-float stagger-1">
                     <i className="fas fa-star text-2xl sm:text-3xl"></i>
                   </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2">
-                  {t("features.priority.title")}
-                </h3>
-                <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark flex-grow">
-                  {t("features.priority.description")}
-                </p>
-                </div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2">
+                    {t("features.priority.title")}
+                  </h3>
+                  <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark flex-grow">
+                    {t("features.priority.description")}
+                  </p>
+                </AnimatedCard>
               </ScrollReveal>
             </div>
           </div>
@@ -250,119 +217,119 @@ export default function Home() {
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-stretch">
               <ScrollReveal delay={100}>
-                <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
-                <div className="flex items-start mb-3">
-                  <i className="fas fa-shield text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.security.title")}</h3>
-                </div>
-                <div className="flex-grow">
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    {t("businessFeatures.security.desc1")}
-                  </p>
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    {t("businessFeatures.security.desc2")}
-                  </p>
-                </div>
-                </div>
+                <AnimatedCard hoverEffect="lift" className="p-5 sm:p-6 h-full flex flex-col">
+                  <div className="flex items-start mb-3">
+                    <i className="fas fa-shield text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
+                    <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.security.title")}</h3>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
+                      {t("businessFeatures.security.desc1")}
+                    </p>
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
+                      {t("businessFeatures.security.desc2")}
+                    </p>
+                  </div>
+                </AnimatedCard>
               </ScrollReveal>
 
               <ScrollReveal delay={150}>
-                <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
-                <div className="flex items-start mb-3">
-                  <i className="fas fa-briefcase text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.workspace.title")}</h3>
-                </div>
-                <div className="flex-grow">
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    {t("businessFeatures.workspace.desc1")}
-                  </p>
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    {t("businessFeatures.workspace.desc2")}
-                  </p>
-                </div>
-                </div>
+                <AnimatedCard hoverEffect="glow" className="p-5 sm:p-6 h-full flex flex-col">
+                  <div className="flex items-start mb-3">
+                    <i className="fas fa-briefcase text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
+                    <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.workspace.title")}</h3>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
+                      {t("businessFeatures.workspace.desc1")}
+                    </p>
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
+                      {t("businessFeatures.workspace.desc2")}
+                    </p>
+                  </div>
+                </AnimatedCard>
               </ScrollReveal>
 
               <ScrollReveal delay={200}>
-                <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
-                <div className="flex items-start mb-3">
-                  <i className="fas fa-robot text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.aiModels.title")}</h3>
-                </div>
-                <div className="flex-grow">
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    {t("businessFeatures.aiModels.desc1")}
-                  </p>
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    {t("businessFeatures.aiModels.desc2")}
-                  </p>
-                </div>
-                </div>
+                <AnimatedCard hoverEffect="scale" className="p-5 sm:p-6 h-full flex flex-col">
+                  <div className="flex items-start mb-3">
+                    <i className="fas fa-robot text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
+                    <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.aiModels.title")}</h3>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
+                      {t("businessFeatures.aiModels.desc1")}
+                    </p>
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
+                      {t("businessFeatures.aiModels.desc2")}
+                    </p>
+                  </div>
+                </AnimatedCard>
               </ScrollReveal>
 
               <ScrollReveal delay={250}>
-                <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
-                <div className="flex items-start mb-3">
-                  <i className="fas fa-link text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.connectors.title")}</h3>
-                </div>
-                <div className="flex-grow">
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    {t("businessFeatures.connectors.description")}
-                  </p>
-                </div>
-                </div>
+                <AnimatedCard hoverEffect="tilt" className="p-5 sm:p-6 h-full flex flex-col">
+                  <div className="flex items-start mb-3">
+                    <i className="fas fa-link text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
+                    <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.connectors.title")}</h3>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
+                      {t("businessFeatures.connectors.description")}
+                    </p>
+                  </div>
+                </AnimatedCard>
               </ScrollReveal>
 
               <ScrollReveal delay={300}>
-                <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
-                <div className="flex items-start mb-3">
-                  <i className="fas fa-users text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.collaboration.title")}</h3>
-                </div>
-                <div className="flex-grow">
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    {t("businessFeatures.collaboration.desc1")}
-                  </p>
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    {t("businessFeatures.collaboration.desc2")}
-                  </p>
-                </div>
-                </div>
+                <AnimatedCard hoverEffect="lift" className="p-5 sm:p-6 h-full flex flex-col">
+                  <div className="flex items-start mb-3">
+                    <i className="fas fa-users text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
+                    <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.collaboration.title")}</h3>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
+                      {t("businessFeatures.collaboration.desc1")}
+                    </p>
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
+                      {t("businessFeatures.collaboration.desc2")}
+                    </p>
+                  </div>
+                </AnimatedCard>
               </ScrollReveal>
 
               <ScrollReveal delay={350}>
-                <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift h-full flex flex-col">
-                <div className="flex items-start mb-3">
-                  <i className="fas fa-check-circle text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.compliance.title")}</h3>
-                </div>
-                <div className="flex-grow">
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    {t("businessFeatures.compliance.desc1")}
-                  </p>
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    {t("businessFeatures.compliance.desc2")}
-                  </p>
-                </div>
-                </div>
+                <AnimatedCard hoverEffect="glow" className="p-5 sm:p-6 h-full flex flex-col">
+                  <div className="flex items-start mb-3">
+                    <i className="fas fa-check-circle text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
+                    <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.compliance.title")}</h3>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
+                      {t("businessFeatures.compliance.desc1")}
+                    </p>
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
+                      {t("businessFeatures.compliance.desc2")}
+                    </p>
+                  </div>
+                </AnimatedCard>
               </ScrollReveal>
 
               <ScrollReveal delay={400}>
-                <div className="bg-background-light dark:bg-background-dark p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 md:col-span-2 lg:col-span-1 hover-lift h-full flex flex-col">
-                <div className="flex items-start mb-3">
-                  <i className="fas fa-dollar-sign text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
-                  <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.pricing.title")}</h3>
-                </div>
-                <div className="flex-grow">
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
-                    {t("businessFeatures.pricing.desc1")}
-                  </p>
-                  <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
-                    {t("businessFeatures.pricing.desc2")}
-                  </p>
-                </div>
-                </div>
+                <AnimatedCard hoverEffect="scale" className="p-5 sm:p-6 md:col-span-2 lg:col-span-1 h-full flex flex-col">
+                  <div className="flex items-start mb-3">
+                    <i className="fas fa-dollar-sign text-primary mr-3 mt-1 text-lg sm:text-xl"></i>
+                    <h3 className="text-base sm:text-lg font-bold">{t("businessFeatures.pricing.title")}</h3>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm mb-2">
+                      {t("businessFeatures.pricing.desc1")}
+                    </p>
+                    <p className="text-text-muted-light dark:text-text-muted-dark text-xs sm:text-sm">
+                      {t("businessFeatures.pricing.desc2")}
+                    </p>
+                  </div>
+                </AnimatedCard>
               </ScrollReveal>
             </div>
           </div>
@@ -385,7 +352,7 @@ export default function Home() {
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               <ScrollReveal delay={100}>
-                <div className="bg-background-light dark:bg-background-dark p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift">
+                <AnimatedCard hoverEffect="lift" className="p-6 sm:p-8">
                   <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6">
                     &quot;Chỉ riêng việc tăng tốc độ đã đáng giá với gói đăng ký. Quy trình làm việc
                     của tôi đã trở nên hiệu quả hơn rất nhiều. Rất đáng
@@ -407,10 +374,10 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </AnimatedCard>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <div className="bg-background-light dark:bg-background-dark p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-800 hover-lift">
+                <AnimatedCard hoverEffect="glow" className="p-6 sm:p-8">
                   <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6">
                     &quot;Là một người viết, việc được ưu tiên truy cập trong giờ cao điểm là
                     một cứu cánh. Không còn phải chờ đợi để có cảm hứng
@@ -433,10 +400,10 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </AnimatedCard>
               </ScrollReveal>
               <ScrollReveal delay={300}>
-                <div className="bg-background-light dark:bg-background-dark p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-800 md:col-span-2 lg:col-span-1 hover-lift">
+                <AnimatedCard hoverEffect="scale" className="p-6 sm:p-8 md:col-span-2 lg:col-span-1">
                   <p className="text-sm sm:text-base text-text-muted-light dark:text-text-muted-dark mb-4 sm:mb-6">
                     &quot;Được thử các tính năng mới trước tiên thật tuyệt vời. Cảm giác như
                     tôi đang ở tuyến đầu của AI, và Technow làm cho việc đăng ký
@@ -459,7 +426,7 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </AnimatedCard>
               </ScrollReveal>
             </div>
           </div>
@@ -491,14 +458,15 @@ export default function Home() {
                 </ScrollReveal>
                 <ScrollReveal delay={400}>
                   <div className="px-4">
-                    <a
-                      className="w-full sm:w-auto bg-primary text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-lg hover:opacity-90 transition-all duration-300 shadow-xl shadow-primary/40 z-10 relative inline-block hover-lift hover-glow"
+                    <AnimatedButton
                       href="https://www.facebook.com/technowIT.vn"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      variant="primary"
+                      size="lg"
+                      className="w-full sm:w-auto z-10 relative"
+                      ariaLabel={t("pricing.cta")}
                     >
                       {t("pricing.cta")}
-                    </a>
+                    </AnimatedButton>
                     <p className="text-xs sm:text-sm text-slate-400 mt-3 sm:mt-4 z-10 relative">
                       {t("pricing.note")}
                     </p>
