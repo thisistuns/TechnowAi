@@ -3,28 +3,32 @@
 import { useState } from "react";
 
 export default function DarkModeToggle() {
-  // Kiểm tra theme hiện tại từ DOM
-  const getCurrentTheme = () => {
+  const [isDark, setIsDark] = useState(() => {
     if (typeof window === "undefined") return false;
-    const htmlElement = document.documentElement;
-    return htmlElement.classList.contains("dark");
-  };
-
-  const [isDark, setIsDark] = useState(getCurrentTheme);
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark);
+    
+    // Apply theme class immediately
+    if (shouldBeDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    
+    return shouldBeDark;
+  });
   const [mounted] = useState(() => typeof window !== "undefined");
 
   const toggleDarkMode = () => {
     const newIsDark = !isDark;
     setIsDark(newIsDark);
     
-    const htmlElement = document.documentElement;
     if (newIsDark) {
-      htmlElement.classList.add("dark");
-      htmlElement.classList.remove("light-mode");
+      document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
     } else {
-      htmlElement.classList.remove("dark");
-      htmlElement.classList.add("light-mode");
+      document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
   };
