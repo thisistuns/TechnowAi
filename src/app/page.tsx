@@ -41,13 +41,6 @@ export default function Home() {
                   <stop offset="0%" stopColor="#4A90E2" />
                   <stop offset="100%" stopColor="#6B8DD6" />
                 </linearGradient>
-                <filter id="glow">
-                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                  <feMerge>
-                    <feMergeNode in="coloredBlur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
               </defs>
               <text
                 fontFamily="Poppins, sans-serif"
@@ -55,7 +48,6 @@ export default function Home() {
                 fontWeight="bold"
                 letterSpacing="0em"
                 style={{ whiteSpace: "pre" }}
-                filter="url(#glow)"
               >
                 <tspan x="0" y="40.8" fill="url(#logoGradient)">
                   tech
@@ -491,7 +483,7 @@ export default function Home() {
             </ScrollReveal>
             <div className="space-y-3 sm:space-y-4">
               <ScrollReveal delay={100}>
-                <details className="group bg-surface-light dark:bg-surface-dark p-5 sm:p-6 rounded-lg border border-slate-200 dark:border-slate-800 hover-lift" open>
+                <details className="group bg-surface-light dark:bg-surface-dark p-5 sm:p-6 rounded-lg border border-slate-200 dark:border-slate-800 hover-lift">
                   <summary className="flex items-center justify-between cursor-pointer font-semibold text-base sm:text-lg">
                     <span className="pr-4">{t("faq.q1.question")}</span>
                     <i className="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180 flex-shrink-0"></i>

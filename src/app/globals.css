@@ -271,6 +271,9 @@ body {
 .logo-svg {
   color: #1E293B;
   transition: all 0.3s ease;
+  filter: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -305,9 +308,9 @@ body {
   }
 }
 
-/* Logo glow effect */
+/* Logo glow effect - giảm độ loá */
 .logo-svg:hover {
-  filter: drop-shadow(0 0 15px rgba(74, 144, 226, 0.6));
+  filter: drop-shadow(0 0 5px rgba(74, 144, 226, 0.3));
 }
 
 /* Brand highlight */
