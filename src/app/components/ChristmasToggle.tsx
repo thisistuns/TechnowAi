@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 
 export default function ChristmasToggle() {
-  const [isChristmas, setIsChristmas] = useState(() => {
+  const getInitialChristmasState = () => {
     if (typeof window === "undefined") return false;
     // Tự động bật vào tháng 12
     const month = new Date().getMonth() + 1; // 1-12
@@ -12,11 +12,12 @@ export default function ChristmasToggle() {
       return saved === "true";
     }
     return month === 12; // Tự động bật vào tháng 12
-  });
-  const [mounted, setMounted] = useState(false);
+  };
 
-  useEffect(() => {
-    setMounted(true);
+  const [isChristmas, setIsChristmas] = useState(getInitialChristmasState);
+  const [mounted] = useState(() => typeof window !== "undefined");
+
+  useLayoutEffect(() => {
     const html = document.documentElement;
     
     if (isChristmas) {
