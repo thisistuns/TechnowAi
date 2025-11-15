@@ -455,20 +455,20 @@ html.christmas .border-slate-800 {
 .snowflake {
   position: fixed;
   top: -10px;
-  color: rgba(148, 163, 184, 0.8);
+  color: rgba(125, 211, 252, 0.7); /* Màu xanh nhẹ cho light mode */
   font-size: 1em;
   font-family: Arial, sans-serif;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  text-shadow: 0 0 4px rgba(125, 211, 252, 0.5);
   user-select: none;
   pointer-events: none;
   z-index: 1000;
   animation: fall linear infinite;
 }
 
-/* Dark mode - tuyết sáng hơn */
+/* Dark mode - tuyết trắng sáng hơn */
 .dark .snowflake {
-  color: rgba(226, 232, 240, 0.7);
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  color: rgba(226, 232, 240, 0.8);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
 }
 
 @keyframes fall {

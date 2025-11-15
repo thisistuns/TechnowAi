@@ -17,14 +17,14 @@ export default function Snowflakes() {
   const [snowflakes, setSnowflakes] = useState<Snowflake[]>(() => {
     if (typeof window === "undefined") return [];
     
-    // Tạo 50 bông tuyết với kích thước và tốc độ khác nhau (ít hơn để không quá rối)
+    // Tạo 50 bông tuyết với kích thước và tốc độ khác nhau (to hơn)
     return Array.from({ length: 50 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
       animationDuration: 6 + Math.random() * 10, // 6-16 giây
       animationDelay: Math.random() * 5,
-      size: 6 + Math.random() * 10, // 6-16px
-      opacity: 0.3 + Math.random() * 0.5, // 0.3-0.8 (nhẹ hơn)
+      size: 12 + Math.random() * 16, // 12-28px (to hơn)
+      opacity: 0.4 + Math.random() * 0.5, // 0.4-0.9
     }));
   });
 
