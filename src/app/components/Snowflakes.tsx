@@ -14,44 +14,19 @@ interface Snowflake {
 const SNOWFLAKE_SYMBOLS = ["❄", "❅", "❆", "✻", "✼", "✽", "✾", "✿"];
 
 export default function Snowflakes() {
-  const [snowflakes, setSnowflakes] = useState<Snowflake[]>([]);
-  const [isActive, setIsActive] = useState(false);
-
-  useEffect(() => {
-    // Kiểm tra xem có class christmas trên html không
-    const checkChristmas = () => {
-      const html = document.documentElement;
-      return html.classList.contains("christmas");
-    };
-
-    setIsActive(checkChristmas());
-
-    // Tạo 60 bông tuyết với kích thước và tốc độ khác nhau
-    const newSnowflakes: Snowflake[] = Array.from({ length: 60 }, (_, i) => ({
+  const [snowflakes, setSnowflakes] = useState<Snowflake[]>(() => {
+    if (typeof window === "undefined") return [];
+    
+    // Tạo 50 bông tuyết với kích thước và tốc độ khác nhau (ít hơn để không quá rối)
+    return Array.from({ length: 50 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
-      animationDuration: 5 + Math.random() * 8, // 5-13 giây
+      animationDuration: 6 + Math.random() * 10, // 6-16 giây
       animationDelay: Math.random() * 5,
-      size: 8 + Math.random() * 12, // 8-20px
-      opacity: 0.4 + Math.random() * 0.6, // 0.4-1
+      size: 6 + Math.random() * 10, // 6-16px
+      opacity: 0.3 + Math.random() * 0.5, // 0.3-0.8 (nhẹ hơn)
     }));
-
-    setSnowflakes(newSnowflakes);
-
-    // Lắng nghe thay đổi class christmas
-    const observer = new MutationObserver(() => {
-      setIsActive(checkChristmas());
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  if (!isActive) return null;
+  });
 
   return (
     <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">

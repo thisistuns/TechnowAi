@@ -408,19 +408,14 @@ body {
   }
 }
 
-/* Christmas color scheme */
+/* Christmas color scheme - nhẹ nhàng, không làm thay đổi quá nhiều */
 html.christmas {
   --christmas-red: #DC2626;
   --christmas-green: #16A34A;
   --christmas-gold: #F59E0B;
-  --christmas-snow: #F0F9FF;
 }
 
-html.christmas body {
-  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
-  position: relative;
-}
-
+/* Chỉ thêm accent màu nhẹ nhàng, không thay đổi background chính */
 html.christmas body::before {
   content: "";
   position: fixed;
@@ -429,47 +424,51 @@ html.christmas body::before {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 10% 20%, rgba(220, 38, 38, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(22, 163, 74, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.03) 0%, transparent 40%);
   pointer-events: none;
   z-index: 0;
 }
 
-html.christmas .bg-background-light {
-  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%) !important;
-}
-
-html.christmas .bg-surface-light {
-  background: rgba(30, 41, 59, 0.8) !important;
-  border-color: rgba(220, 38, 38, 0.3) !important;
-}
-
+/* Chỉ thay đổi màu primary một chút */
 html.christmas .text-primary {
   color: var(--christmas-red) !important;
 }
 
 html.christmas .bg-primary {
-  background: linear-gradient(135deg, var(--christmas-red) 0%, var(--christmas-green) 100%) !important;
+  background: linear-gradient(135deg, var(--christmas-red) 0%, #E63946 100%) !important;
 }
 
 html.christmas button.bg-primary:hover {
-  background: linear-gradient(135deg, var(--christmas-green) 0%, var(--christmas-red) 100%) !important;
-  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+  background: linear-gradient(135deg, #E63946 0%, var(--christmas-red) 100%) !important;
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.4);
 }
 
-/* Snowflakes animation */
+/* Thêm border accent nhẹ cho một số elements */
+html.christmas .border-slate-200,
+html.christmas .border-slate-800 {
+  border-color: rgba(220, 38, 38, 0.2) !important;
+}
+
+/* Snowflakes animation - hiển thị ở cả light và dark mode */
 .snowflake {
   position: fixed;
   top: -10px;
-  color: white;
+  color: rgba(148, 163, 184, 0.8);
   font-size: 1em;
   font-family: Arial, sans-serif;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
   user-select: none;
   pointer-events: none;
   z-index: 1000;
   animation: fall linear infinite;
+}
+
+/* Dark mode - tuyết sáng hơn */
+.dark .snowflake {
+  color: rgba(226, 232, 240, 0.7);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
 @keyframes fall {
