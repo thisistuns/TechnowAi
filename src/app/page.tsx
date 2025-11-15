@@ -13,6 +13,7 @@ import AnimatedCard from "./components/AnimatedCard";
 import AnimatedBadge from "./components/AnimatedBadge";
 import Snowflakes from "./components/Snowflakes";
 import ChristmasToggle from "./components/ChristmasToggle";
+import ChristmasDecorations from "./components/ChristmasDecorations";
 import { useTranslation } from "./hooks/useTranslation";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
   return (
     <div className="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
       <Snowflakes />
+      <ChristmasDecorations />
       <ScrollProgress />
       <header className="sticky top-[1px] z-40 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
         <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
