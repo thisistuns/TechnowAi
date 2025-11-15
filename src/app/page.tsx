@@ -11,6 +11,8 @@ import LanguageSwitcher from "./components/LanguageSwitcher";
 import AnimatedButton from "./components/AnimatedButton";
 import AnimatedCard from "./components/AnimatedCard";
 import AnimatedBadge from "./components/AnimatedBadge";
+import Snowflakes from "./components/Snowflakes";
+import ChristmasToggle from "./components/ChristmasToggle";
 import { useTranslation } from "./hooks/useTranslation";
 
 export default function Home() {
@@ -26,6 +28,7 @@ export default function Home() {
 
   return (
     <div className="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+      <Snowflakes />
       <ScrollProgress />
       <header className="sticky top-[1px] z-40 bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
         <nav className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
@@ -82,6 +85,7 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-2">
             <LanguageSwitcher />
             <DarkModeToggle />
+            <ChristmasToggle />
             <AnimatedButton
               href="https://www.facebook.com/technowIT.vn"
               variant="primary"
@@ -94,6 +98,7 @@ export default function Home() {
           <div className="flex md:hidden items-center gap-2">
             <LanguageSwitcher />
             <DarkModeToggle />
+            <ChristmasToggle />
             <MobileMenu />
           </div>
         </nav>
@@ -113,7 +118,7 @@ export default function Home() {
             <ScrollReveal delay={100}>
               <h1 className="text-4xl md:text-6xl font-bold text-text-light dark:text-text-dark leading-tight mb-4 animate-fade-in-up">
                 {t("hero.title")}
-                <br className="hidden md:block" /> AI với{" "}
+                <br className="hidden md:block" /> {t("hero.titleWith")}{" "}
                 <span className="text-primary bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">{t("hero.titleHighlight")}</span>
               </h1>
             </ScrollReveal>
